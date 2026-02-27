@@ -1,23 +1,10 @@
-# ═══════════════════════════════════════════════════════════
+
 # PROJECT 3: PE PARTICIPATION & INCLUSION ANALYSIS
-# ═══════════════════════════════════════════════════════════
 
 # Load libraries
 library(tidyverse)
 library(sqldf)
 
-# Load data (using file chooser - works every time!)
-pe_data <- read.csv(file.choose())
-
-# Verify it loaded
-cat("Data loaded successfully! Rows:", nrow(pe_data), "\n")
-head(pe_data)
-
-
-# Explore it
-head(pe_data)        # First 6 rows
-str(pe_data)         # Structure
-summary(pe_data)     # Summary statistics
 
 # How many students have disabilities?
 table(pe_data$has_disability)
@@ -41,7 +28,7 @@ q1_disability_participation<-sqldf("SELECT has_disability, AVG(pe_frequency) AS 
       GROUP BY has_disability")
 # INSIGHT: Students with disabilities participate at nearly the same 
 # frequency as students without disabilities (2.92 vs 2.97 times/week).
-# This suggests inclusive PE provision in terms of ACCESS, though 
+# This suggests inclusive PE provision in terms of access, though 
 # quality of experience may differ (explored in later questions).
 
 #QUESTION 2:
@@ -167,7 +154,7 @@ ggplot(barriers_data, aes(x = main_barrier, y = count,
   ) +
   theme_minimal()
 
-# Save the chart
+# Save chart
 ggsave("barriers_chart.png", width = 10, height = 6)
 
 #CHART 2: CONFIDENCE BY SPORTS CLUBS
@@ -212,3 +199,4 @@ ggplot(regional_participation, aes(x=region, y=participation_rate))+
 ggsave("regional_participation_chart.png", width = 10, height = 6)
 
 list.files(pattern = "\\.png$")
+
