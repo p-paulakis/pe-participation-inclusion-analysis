@@ -77,3 +77,14 @@ Shows equitable PE provision across UK regions.
 
 ## About Me
 Background in PE and sports, with dissertation research on inclusion. Currently working with students with additional support needs. Passionate about using data to improve educational accessibility and equity.
+
+## Interactive Dashboard
+
+Explore the data yourself: [View Dashboard](https://lookerstudio.google.com/reporting/6299c580-0eeb-45e5-8304-e7e1b80ca7e9)
+
+Features:
+- Filter by region (England, Scotland, Wales, Northern Ireland)
+- Filter by disability status
+- All charts update automatically
+- Self-service data exploration
+
